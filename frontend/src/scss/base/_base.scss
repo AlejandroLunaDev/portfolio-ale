@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    color-scheme: light dark;
+}
+
+html{
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+section{
+    height: 100dvh;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
