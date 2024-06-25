@@ -1,0 +1,50 @@
+.info {
+  background: #3b043e;
+  background: linear-gradient(
+    180deg,
+    rgba(59, 4, 62, 1) 60%,
+    rgba(0, 0, 0, 1) 90%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+gap: 120px;
+
+  .design,
+  .dev {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    z-index: 2;
+    span {
+      text-transform: capitalize;
+      font-size: 5rem;
+      letter-spacing: 5px;
+      font-weight: 900;
+    }
+    p {
+      font-size: 1.5rem;
+      color: white;
+      line-height: 1.5;
+    }
+  }
+  .design {
+    flex-direction: row;
+    align-items: center;
+
+    span {
+      height: 140px;
+      transform: rotate(90deg);
+      color: #43efff;
+    }
+  }
+  .dev {
+    
+    span {
+      color: #43efff;
+    }
+    p {
+      width: 80%;
+    }
+  }
+}

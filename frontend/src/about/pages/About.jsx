@@ -1,8 +1,9 @@
-import MeInfo from "../components/MeInfo";
-import Presentation from "../components/Presentation";
-import Skills from "../components/Skills";
-import Links from "../components/Links";
+import MeInfo from "../components/meInfo/MeInfo";
+import Presentation from "../components/presentation/Presentation";
+import Skills from "../components/skills/Skills";
+import Links from "../components/links/Links";
 import Navbar from "../../layout/navbar/Navbar";
+import styles from './About.module.scss';
 
 
 export default function About() {
@@ -12,6 +13,7 @@ export default function About() {
         <Navbar />
     </header>
     <main>
+
         <section>
             <Presentation />
         </section>
@@ -24,6 +26,9 @@ export default function About() {
         <section>
             <Links />
         </section>
+        <video autoPlay muted loop className={styles.video} preload='auto'>
+        <source src='../../../public/video/fondoTest.mp4' type='video/mp4' />
+      </video>
     </main>
     </>
   )
