@@ -1,3 +1,4 @@
+@import '../../scss/animation/animation';
 .nav{
     display: flex;
     flex-direction: column;
@@ -9,11 +10,9 @@
         text-transform: capitalize;
         font-weight: 800;
         transform: translate(200px, 0);
+        letter-spacing: -5px;
+        display: flex;
         transition: all 0.7s cubic-bezier(0.2, 0.6, 0.2, 1) 0s;
-        animation: 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) 0s normal none both
-          running;
-        position: relative;
-        z-index: 2;
         &:hover {
             transform: translate(250px, 0);
             color: transparent;
@@ -23,7 +22,7 @@
             background-image: linear-gradient(
               225deg,
               #43efff 34%,
-              #7e0a61 76%
+              #7e0a61 96%
             );
             -webkit-background-clip: text;
             background-clip: text;
@@ -35,11 +34,11 @@
           }
   
           &:nth-child(2):hover::before {
-            content: 'Trabajo';
+            content: 'Proyectos';
             background-image: linear-gradient(
               225deg,
               #43efff 34%,
-              #7e0a61 76%
+              #7e0a61 96%
             );
             -webkit-background-clip: text;
             background-clip: text;
@@ -60,9 +59,9 @@
             content: 'Contacto';
             background-image: linear-gradient(
               270deg,
-              #43efff 0%,
-              rgba(255, 255, 255, 1) 35%,
-              rgba(126, 10, 97, 1) 100%
+              #43efff 10%,
+              rgba(255, 255, 255, 1) 75%,
+              rgba(126, 10, 97, 1) 130%
             );
             -webkit-background-clip: text;
             background-clip: text;
@@ -74,4 +73,9 @@
           }
   
     }
+}
+
+.fadeInLetter {
+  display: inline-block;
+  animation: fadeInBehind 1.3s ease-in;
 }

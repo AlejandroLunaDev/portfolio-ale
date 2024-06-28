@@ -22,3 +22,8 @@ section{
     scroll-snap-align: center;
     scroll-snap-stop: always;
 }
+
+::selection {
+  background: #43efff48;
+  color: #fff;
+}

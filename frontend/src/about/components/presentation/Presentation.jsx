@@ -5,13 +5,7 @@ import { MdArrowDownward } from "react-icons/md";
 export default function Presentation() {
   return (
     <article className={styles.hero}>
-      <motion.h1
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 2 }}
-        transition={{ duration: 3 }}
-      >
-        Desarrollador web creativo
-      </motion.h1>
+      <h1>Desarrollador Web Creativo</h1>
       <motion.p
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

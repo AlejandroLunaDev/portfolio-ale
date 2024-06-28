@@ -1,0 +1,64 @@
+@import "../../../scss/animation/_animation.scss";
+
+.history {
+    background-color: rgba(0, 0, 0, 0.396);
+    position: relative;
+    z-index: 7;
+    overflow-y: hidden;
+    padding: 0 20px;
+  
+    .header {
+        width: 100%;
+        display: flex;  
+        flex-direction: column;
+        margin-top: 60px;
+        align-items: length($list: auto);    
+        gap: 20px;            
+        h1 {    
+            color: #43efff;
+            font-size: 4rem;    
+            font-weight: 800;
+            text-transform: capitalize;
+        }
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        .course {
+            background-color: #3b043e;
+            padding: 20px;
+            border-radius: 10px;
+           
+            header{
+                display: flex;
+                flex-direction: row;
+                align-items: start;
+                justify-content: space-between;
+                margin-bottom: 25px;
+                span{
+                    font-size: 1.5rem;
+                }
+                div {
+                    h3 {
+                        color: #43efff;
+                        font-size: 2rem;
+                        font-weight: 800;
+                        text-transform: capitalize;
+                    }
+                    p {
+                        color: white;
+                        font-size: 1rem;
+                    }       
+                }
+        }
+        }
+    }
+}
+
+.animate .fadeInLeft {
+    animation: fadeInLeft 1s forwards;
+  }
+  .animate .fadeInRight {
+    animation: fadeInRight 1s forwards;
+  }

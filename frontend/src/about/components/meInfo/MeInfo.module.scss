@@ -1,3 +1,4 @@
+@import '../../../scss/animation/animation';
 .info {
   background: #3b043e;
   background: linear-gradient(
@@ -8,14 +9,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-gap: 120px;
+  z-index: 6;
 
   .design,
   .dev {
     display: flex;
     flex-direction: column;
-    width: 50%;
-    z-index: 2;
+    object-fit: contain;
+    
+    z-index: 7;
+    padding: 1rem;
     span {
       text-transform: capitalize;
       font-size: 5rem;
@@ -23,28 +26,38 @@ gap: 120px;
       font-weight: 900;
     }
     p {
-      font-size: 1.5rem;
+      font-size: 1.25rem;
       color: white;
       line-height: 1.5;
+
     }
   }
   .design {
     flex-direction: row;
-    align-items: center;
-
+    justify-content: center;
     span {
+      margin-top: 80px;
       height: 140px;
       transform: rotate(90deg);
       color: #43efff;
     }
   }
   .dev {
-    
     span {
       color: #43efff;
     }
     p {
+      margin-top: 50px;
       width: 80%;
     }
   }
+}
+
+
+.animate .design span {
+  animation: tracking-in-expand1 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+.animate .dev span {
+  animation: tracking-in-expand 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }

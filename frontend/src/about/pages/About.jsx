@@ -4,6 +4,7 @@ import Skills from "../components/skills/Skills";
 import Links from "../components/links/Links";
 import Navbar from "../../layout/navbar/Navbar";
 import styles from './About.module.scss';
+import History from "../components/history/History";
 
 
 export default function About() {
@@ -22,6 +23,9 @@ export default function About() {
         </section>
         <section>
             <Skills />
+        </section>
+        <section>
+          <History />
         </section>
         <section>
             <Links />
