@@ -1,0 +1,57 @@
+.App {
+    font-family: sans-serif;
+    z-index: 999;
+     button {
+      padding: 12px 20px;
+      font-family: sofia-pro, sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 16px;
+      color: #fff;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      border-radius: 8px;
+      width: 160px;
+      z-index: 9;
+    } 
+    
+    ul {
+      padding: 10px 80px;
+      background-color: #752596;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 0;
+      height: 0;
+      border-radius: 8px;
+      align-items: center;
+      opacity: 0;
+      z-index: -1;
+    }
+  
+    li {
+      list-style: none;
+      margin: 0;
+      padding: 10px 0;
+      font-family: sofia-pro, sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 17px;
+      color: #fff;
+    }
+  }
+  
+  .menu {
+    position: absolute;
+    top: 80px; /* Ajusta según tu diseño */
+    right: 90px; /* Ajusta para alinear a la derecha */
+    background-color: #fff; /* Ajusta el color de fondo según tu diseño */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1); /* Opcional: sombra para mejorar el contraste */
+    list-style-type: none;
+    padding: 10px;
+    z-index: 100;
+    border-radius: 8px;
+    margin-right: 20px; /* Nuevo estilo para mover más a la derecha */
+  }
+  

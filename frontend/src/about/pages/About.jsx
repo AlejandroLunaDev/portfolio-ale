@@ -4,7 +4,7 @@ import Skills from "../components/skills/Skills";
 import Links from "../components/links/Links";
 import Navbar from "../../layout/navbar/Navbar";
 import styles from './About.module.scss';
-import History from "../components/history/History";
+import History from "../components/experience/History";
 
 
 export default function About() {
