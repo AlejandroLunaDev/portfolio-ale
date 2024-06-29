@@ -127,7 +127,7 @@ export default function Skills() {
           <ul className={styles.backendList}>
             <li>
               <h4>Lenguajes</h4>
-              <p>Node.js (Javascript)</p>
+              <p>Node.js (Javascript, Typescript)</p>
             </li>
             <li>
               <h4>Frameworks</h4>

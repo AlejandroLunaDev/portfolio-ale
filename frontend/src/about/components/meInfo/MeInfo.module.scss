@@ -1,15 +1,15 @@
 @import '../../../scss/animation/animation';
 .info {
-  background: #3b043e;
+  background: rgba(0, 0, 0, 0.627);
   background: linear-gradient(
     180deg,
     rgba(59, 4, 62, 1) 60%,
-    rgba(0, 0, 0, 1) 90%
+    rgba(0, 0, 0, 0.627) 100%
   );
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 6;
+  z-index: 7;
 
   .design,
   .dev {
