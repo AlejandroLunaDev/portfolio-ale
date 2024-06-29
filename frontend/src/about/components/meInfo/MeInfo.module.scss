@@ -1,3 +1,5 @@
+@use "sass:map";
+@import '../../../scss/base/variables';
 @import '../../../scss/animation/animation';
 .info {
   background: rgba(0, 0, 0, 0.627);
@@ -16,7 +18,6 @@
     display: flex;
     flex-direction: column;
     object-fit: contain;
-    
     z-index: 7;
     padding: 1rem;
     span {
@@ -61,4 +62,47 @@
 
 .animate .dev span {
   animation: tracking-in-expand 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+@media (max-width: map.get($break-pontis, "xs")) {
+  
+.info{
+gap: 40px;
+flex-direction: column;
+align-items: center;
+padding-top: 50px;
+overflow: hidden;
+.design,
+.dev {
+  width: 100%;
+  padding: 0 20px;
+  position: relative;
+
+  span {
+    font-size: 3rem;
+  }
+    p {
+      
+       font-size: 0.8rem;
+       margin-top: 0;
+       line-height: 1.5rem;
+     }
+}
+
+.design {
+  span {
+    top: 30px; 
+    left: 0;
+    height: 0;
+    position: absolute;
+  }
+  p {
+  margin-left: 80px;
+  }
+}
+.dev {
+  margin-left: 50px;
+}
+}
+
 }

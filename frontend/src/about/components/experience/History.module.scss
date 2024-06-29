@@ -1,3 +1,5 @@
+@use "sass:map";
+@import '../../../scss/base/variables';
 @import "../../../scss/animation/_animation.scss";
 
 .history {
@@ -91,4 +93,42 @@
     max-width: 100%;
     height: auto;
     border-radius: 10px;
+  }
+
+  @media (max-width: map.get($break-pontis, 'xs')){
+    .history {
+
+        .header {
+            margin-top: 40px;
+            h1 {
+                font-size: 3rem;
+            }
+        }
+        main {
+            .course {
+                header {
+                    div {
+
+                        h3 {
+                            font-size: 1rem;
+                        }
+                        p {
+                            font-size: 0.75rem;
+                        }
+                    }
+                    span {
+                        font-size: 0.75rem;
+                    }
+
+                }
+                p {
+                    font-size: 0.75rem;
+                }
+            }
+        }
+        .modalContent img {
+            max-width: 80%;  // Adjust the width as needed
+            height: auto; // Keep auto to maintain aspect ratio
+        }
+    }
   }

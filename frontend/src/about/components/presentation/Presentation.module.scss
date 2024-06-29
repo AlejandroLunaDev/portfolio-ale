@@ -1,4 +1,6 @@
+@use "sass:map";
 @import '../../../scss/animation/animation';
+@import '../../../scss/base/variables';
 
 .hero{
     width: 100%;
@@ -45,4 +47,24 @@ background: linear-gradient(0deg, rgba(59,4,62,1) 0%, rgba(0,0,0,1) 30%);
     small{
         font-size: 1rem;
     }
+}
+
+@media (max-width: map.get($break-pontis, "xs")) {
+    .hero {
+        padding: 0 30px;
+        h1{
+            font-size: 3rem;
+            padding-top: 180px;
+        }
+        .arrow {
+            left: 25%;
+            small {
+                font-size: 0.7rem;
+            }
+        }
+
+    }
+
+ 
+
 }

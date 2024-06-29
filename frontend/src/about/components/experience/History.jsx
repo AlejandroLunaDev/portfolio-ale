@@ -59,19 +59,20 @@ const History = () => {
 
   const cards = [
     {
-      title: 'Carrera de Frontend React',
-      institution: 'Coderhouse',
-      duration: '2023-2024',
-      description: 'El curso de React fue una experiencia en la que aprendimos sobre el uso de React, los hooks, el estado de React, el manejo de eventos, el routing, el uso de Redux, entre otros.',
-      image: 'https://media.licdn.com/dms/image/D4D22AQHuv4DTa0X8MQ/feedshare-shrink_800/0/1714573165545?e=1722470400&v=beta&t=Tb-P8-4_GFDf2IN3LKAI2BBK1zEoUfYYPxLZVoxqqmU'
-    },
-    {
       title: 'Curso de Backend',
       institution: 'Coderhouse',
       duration: '2024-Presente',
       description: 'El curso de Backend fue una experiencia en la que aprendimos sobre Node.js, Express, MongoDB y cómo crear aplicaciones del lado del servidor.',
       image: ''
     },
+    {
+      title: 'Carrera de Frontend React',
+      institution: 'Coderhouse',
+      duration: '2023-2024',
+      description: 'El curso de React fue una experiencia en la que aprendimos sobre el uso de React, los hooks, el estado de React, el manejo de eventos, el routing, el uso de Redux, entre otros.',
+      image: 'https://media.licdn.com/dms/image/D4D22AQHuv4DTa0X8MQ/feedshare-shrink_800/0/1714573165545?e=1722470400&v=beta&t=Tb-P8-4_GFDf2IN3LKAI2BBK1zEoUfYYPxLZVoxqqmU'
+    },
+
     {
       title: 'Participación en No-Country',
       institution: 'Simulación Laboral',

@@ -98,11 +98,11 @@ export default function Menu() {
         className={styles.menuButton}
         onClick={() => setOpen(!open)}
         whileTap={{ scale: 0.95 }}
-        initial={false} // Evita la animación inicial al montar el componente
+        initial={false} 
       >
         <motion.div
           className={styles.menuButtonBackground}
-          initial={false} // Evita la animación inicial al montar el componente
+          initial={false}
           animate={
             open
               ? { backgroundColor: '#8A2BE2' }

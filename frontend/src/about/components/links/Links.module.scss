@@ -1,3 +1,6 @@
+@use "sass:map";
+@import '../../../scss/base/variables';
+
 .Links {
   display: flex;
   width: 100%;
@@ -5,7 +8,7 @@
 
   .proyectos,
   .curriculum {
-    height: 100vh; /* Changed from 100dvh to 100vh */
+    height: 100vh; 
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -118,5 +121,24 @@
     background: #3b043e;
     height: 100vh; /* Changed from 100dvh to 100vh */
     width: 50%;
+  }
+}
+@media (max-width: map.get($break-pontis, "xs")) {
+  .Links {
+    flex-direction: column;
+    overflow: hidden;
+    .proyectos,
+    .curriculum {
+      padding: 0 20px;
+      width: 100%;
+
+      h1 {
+        font-size: 2.25rem;
+        
+      }
+      p {
+        font-size: 1rem;
+      }
+    }
   }
 }

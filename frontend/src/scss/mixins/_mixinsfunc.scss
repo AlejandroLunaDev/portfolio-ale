@@ -1,0 +1,6 @@
+@mixin flex($df: flex,$jc: center,$al: center){
+    display: $df;
+    justify-content: $jc;
+    align-items: $al;
+/*     flex-wrap: $fw; */
+}
