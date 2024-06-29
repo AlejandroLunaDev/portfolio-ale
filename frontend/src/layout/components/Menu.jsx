@@ -1,11 +1,18 @@
-import styles from "./Menu.module.scss";
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import styles from './Menu.module.scss';
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Turn as Hamburger } from 'hamburger-react';
+import { NavLink } from 'react-router-dom';
+import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
 
 export default function Menu() {
   const [open, setOpen] = useState(false);
-  const items = ["Home", "About", "Services", "Portfolio", "Contact"];
+  const items = [
+    { name: 'Proyectos', route: '/proyect' },
+    { name: 'Sobre', route: '/about' },
+    { name: 'Contacto', route: '/contact' },
+    { name: 'Inicio', route: '/' }
+  ];
 
   const menuVariants = {
     closed: {
@@ -15,19 +22,19 @@ export default function Menu() {
         duration: 0.5,
         staggerChildren: 0.1,
         staggerDirection: -1,
-        when: "afterChildren",
-      },
+        when: 'afterChildren'
+      }
     },
     open: {
       opacity: 1,
-      height: "auto",
+      height: 'auto',
       transition: {
         duration: 0.5,
         staggerChildren: 0.1,
         staggerDirection: 1,
-        when: "beforeChildren",
-      },
-    },
+        when: 'beforeChildren'
+      }
+    }
   };
 
   const itemVariants = {
@@ -37,8 +44,8 @@ export default function Menu() {
       y: 20,
       rotate: 0,
       transition: {
-        duration: 0.3,
-      },
+        duration: 0.3
+      }
     },
     open: {
       opacity: 1,
@@ -46,9 +53,43 @@ export default function Menu() {
       y: 0,
       rotate: 360,
       transition: {
-        duration: 0.5,
-      },
+        duration: 0.5
+      }
+    }
+  };
+
+  const imageVariants = {
+    closed: {
+      opacity: 0,
+      x: 50,
+      transition: {
+        duration: 0.5
+      }
     },
+    open: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.5,
+        delay: 0.5 // Retraso de 0.5 segundos
+      }
+    }
+  };
+
+  const connectVariants = {
+    closed: {
+      opacity: 0,
+      transition: {
+        duration: 0.5
+      }
+    },
+    open: {
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        delay: items.length * 0.1 + 0.5 // Retraso después de todos los ítems y la imagen
+      }
+    }
   };
 
   return (
@@ -62,7 +103,11 @@ export default function Menu() {
         <motion.div
           className={styles.menuButtonBackground}
           initial={false} // Evita la animación inicial al montar el componente
-          animate={open ? { backgroundColor: "#8A2BE2" } : { backgroundColor: "transparent" }}
+          animate={
+            open
+              ? { backgroundColor: '#8A2BE2' }
+              : { backgroundColor: 'transparent' }
+          }
           transition={{ duration: 0.5 }}
         />
         <Hamburger size={34} color='#fff ' sx={{ zIndex: 999 }} />
@@ -72,9 +117,9 @@ export default function Menu() {
           <motion.ul
             className={styles.menu}
             variants={menuVariants}
-            initial="closed"
-            animate="open"
-            exit="closed"
+            initial='closed'
+            animate='open'
+            exit='closed'
           >
             {items.map((item, index) => (
               <motion.li
@@ -82,17 +127,44 @@ export default function Menu() {
                 variants={itemVariants}
                 className={styles.menuItem}
               >
-                {item}
+                <NavLink to={item.route} style={{ textDecoration: 'none', color: 'white' }}>
+                  {item.name}
+                </NavLink>
               </motion.li>
             ))}
             {/* Línea violeta animada */}
             <motion.div
               className={styles.menuLine}
               initial={{ width: 0 }}
-              animate={{ width: "100%" }}
+              animate={{ width: '100%' }}
               transition={{ duration: 0.5 }}
             />
-           <img src="../../../public/vite.svg" alt="" style={{width: 100, height: 100}} /> 
+            <NavLink to='/'style={{ display: 'flex', justifyContent: 'right', paddingRight: '10px' }}>
+              <motion.img
+                src='../../../public/vite.svg'
+                alt=''
+                style={{ width: 100, height: 100 }}
+                variants={imageVariants}
+              />
+            </NavLink>
+            {/* Sección de Conectate */}
+            <motion.div
+              className={styles.connect}
+              variants={connectVariants}
+            >
+              <p>Conectate</p>
+              <div className={styles.icons}>
+                <a href='https://github.com/AlejandroLunaDev' target='_blank' rel='noopener noreferrer'>
+                  <FaGithub size={30} />
+                </a>
+                <a href='https://www.linkedin.com/in/alejandro-luna-dev' target='_blank' rel='noopener noreferrer'>
+                  <FaLinkedin size={30} />
+                </a>
+                <a href='https://www.instagram.com/alejandro.luna87/' target='_blank' rel='noopener noreferrer'>
+                  <FaInstagram size={30} />
+                </a>
+              </div>
+            </motion.div>
           </motion.ul>
         )}
       </AnimatePresence>

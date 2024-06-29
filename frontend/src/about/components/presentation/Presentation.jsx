@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import styles from './Presentation.module.scss';
 import { MdArrowDownward } from "react-icons/md";
+import { BsMouse } from "react-icons/bs";
 
 export default function Presentation() {
   return (
@@ -15,6 +16,8 @@ export default function Presentation() {
         mivocación.
       </motion.p>
       <div className={styles.arrow}>
+      <BsMouse style={{marginRight: '10px', height: '30px', width: '30px'}}/>
+      <small>Desplázate hacia abajo</small>
       <MdArrowDownward />
       </div>
     </article>

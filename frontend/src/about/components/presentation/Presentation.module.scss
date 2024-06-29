@@ -12,6 +12,8 @@ background: linear-gradient(0deg, rgba(59,4,62,1) 0%, rgba(0,0,0,1) 30%);
     h1{
         color: #43efff;
         font-size: 5rem;
+        letter-spacing: -3px;
+        line-height: 1.6;
         font-weight: 800;
         padding-top: 250px;
         text-transform: capitalize;
@@ -23,7 +25,7 @@ background: linear-gradient(0deg, rgba(59,4,62,1) 0%, rgba(0,0,0,1) 30%);
 
     p{  
         color: white;
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         z-index: 3;
     }
 }
@@ -32,10 +34,15 @@ background: linear-gradient(0deg, rgba(59,4,62,1) 0%, rgba(0,0,0,1) 30%);
     z-index: 3;
     position: absolute;
     bottom: 50px;
-    left: 50%;
+    left: 40%;
     transform: translateX(-50%);
     color: #ffff;
     font-size: 1.8rem;
-    animation: zoomInOut 3s infinite;
+    animation: moveUpDown 3s infinite;
+    display: flex;
+    align-items: center;
 
+    small{
+        font-size: 1rem;
+    }
 }
