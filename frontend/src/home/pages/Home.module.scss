@@ -1,3 +1,5 @@
+@use "sass:map";
+@import '../../scss/base/variables';
 @import '../../scss/animation/animation';
 
 .home {
@@ -52,5 +54,23 @@
   
     svg {
       font-size: 2rem;
+    }
+  }
+
+  @media (max-width: map.get($break-pontis, "xs")) {
+    .home {
+      .main {
+        width: 100%;
+          transform: scaleX(-1)!important;
+      }
+
+      .click {
+        p {
+          font-size: 0.75rem;
+        }
+        svg {
+          font-size: 1rem;
+        }
+      }
     }
   }
