@@ -42,43 +42,43 @@ export default function Skills() {
           <ul className={styles.frontendListIcon}>
             <li>
               <figure>
-                <img src="../../../../../public/svgs/logos_javascript.svg" alt="javascript" />
+                <img src="svgs/logos_javascript.svg" alt="javascript" />
               </figure>
               <span>Javascript</span>
             </li>
             <li>
               <figure>
-                <img src="../../../../../public/svgs/devicon_typescript.svg" alt="typescript" />
+                <img src="svgs/devicon_typescript.svg" alt="typescript" />
               </figure>
               <span>Typescript</span>
             </li>
             <li>
               <figure>
-                <img src="../../../../../public/svgs/logos_react.svg" alt="react" />
+                <img src="svgs/logos_react.svg" alt="react" />
               </figure>
               <span>React</span>
             </li>
             <li>
               <figure className={styles.large}>
-                <img src="../../../../../public/svgs/vscode-icons_file-type-html.svg" alt="html" />
+                <img src="svgs/vscode-icons_file-type-html.svg" alt="html" />
               </figure>
               <span>HTML</span>
             </li>
             <li>
               <figure className={styles.large}>
-                <img src="../../../../../public/svgs/vscode-icons_file-type-css.svg" alt="css" />
+                <img src="svgs/vscode-icons_file-type-css.svg" alt="css" />
               </figure>
               <span>CSS</span>
             </li>
             <li>
               <figure className={styles.large}>
-                <img src="../../../../../public/svgs/devicon_tailwindcss.svg" alt="tailwind" />
+                <img src="svgs/devicon_tailwindcss.svg" alt="tailwind" />
               </figure>
               <span>Tailwind</span>
             </li>
             <li>
               <figure className={styles.large}>
-                <img src="../../../../../public/svgs/devicon_sass.svg" alt="sass" />
+                <img src="svgs/devicon_sass.svg" alt="sass" />
               </figure>
               <span>Sass</span>
             </li>
@@ -107,19 +107,19 @@ export default function Skills() {
           <ul className={styles.backendListIcon}>
             <li>
               <figure>
-                <img src="../../../../../public/svgs/vscode-icons_file-type-node.svg" alt="Node" />
+                <img src="svgs/vscode-icons_file-type-node.svg" alt="Node" />
               </figure>
               <span>Node.js</span>
             </li>
             <li>
               <figure>
-                <img src="../../../../../public/svgs/devicon_express.svg" alt="express" />
+                <img src="svgs/devicon_express.svg" alt="express" />
               </figure>
               <span>Express</span>
             </li>
             <li>
               <figure>
-                <img src="../../../../../public/svgs/vscode-icons_file-type-mongo.svg" alt="mongo" />
+                <img src="svgs/vscode-icons_file-type-mongo.svg" alt="mongo" />
               </figure>
               <span>MongoDB</span>
             </li>

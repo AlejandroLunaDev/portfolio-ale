@@ -141,7 +141,7 @@ export default function Menu() {
             />
             <NavLink to='/'style={{ display: 'flex', justifyContent: 'right', paddingRight: '10px' }}>
               <motion.img
-                src='../../../../public/vite.svg'
+                src='vite.svg'
                 alt=''
                 style={{ width: 100, height: 100 }}
                 variants={imageVariants}
