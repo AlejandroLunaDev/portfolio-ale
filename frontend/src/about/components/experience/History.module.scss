@@ -1,0 +1,134 @@
+@use "sass:map";
+@import '../../../scss/base/variables';
+@import "../../../scss/animation/_animation.scss";
+
+.history {
+    background: #00000062;
+    position: relative;
+    z-index: 7;
+    overflow-y: hidden;
+    padding: 0 20px;
+  
+    .header {
+        width: 100%;
+        display: flex;  
+        flex-direction: column;
+        margin-top: 60px;
+        align-items: length($list: auto);    
+        gap: 20px;            
+        h1 {    
+            color: #43efff;
+            font-size: 4rem;    
+            font-weight: 800;
+            text-transform: capitalize;
+        }
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        .course {
+            background-color: #3b043e;
+            padding: 20px;
+            border-radius: 10px;
+            &:hover {
+                background-color: #3b043eb0;
+            }
+            header{
+                display: flex;
+                flex-direction: row;
+                align-items: start;
+                justify-content: space-between;
+                margin-bottom: 25px;
+                span{
+                    font-size: 1.5rem;
+                }
+                div {
+                    h3 {
+                        color: #43efff;
+                        font-size: 2rem;
+                        font-weight: 800;
+                        text-transform: capitalize;
+                    }
+                    p {
+                        color: white;
+                        font-size: 1rem;
+                    }       
+                }
+        }
+        }
+    }
+}
+
+.animate .fadeInLeft {
+    animation: fadeInLeft 1s forwards;
+  }
+  .animate .fadeInRight {
+    animation: fadeInRight 1s forwards;
+  }
+
+  .modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modalContent {
+    background: white;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .modalContent img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  @media (max-width: map.get($break-pontis, 'xs')){
+    .history {
+
+        .header {
+            margin-top: 40px;
+            h1 {
+                font-size: 3rem;
+            }
+        }
+        main {
+            .course {
+                header {
+                    div {
+
+                        h3 {
+                            font-size: 1rem;
+                        }
+                        p {
+                            font-size: 0.75rem;
+                        }
+                    }
+                    span {
+                        font-size: 0.75rem;
+                    }
+
+                }
+                p {
+                    font-size: 0.75rem;
+                }
+            }
+        }
+        .modalContent img {
+            max-width: 80%;  // Adjust the width as needed
+            height: auto; // Keep auto to maintain aspect ratio
+        }
+    }
+  }

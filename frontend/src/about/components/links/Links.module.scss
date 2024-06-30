@@ -1,0 +1,144 @@
+@use "sass:map";
+@import '../../../scss/base/variables';
+
+.Links {
+  display: flex;
+  width: 100%;
+  height: 100%;
+
+  .proyectos,
+  .curriculum {
+    height: 100vh; 
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 7;
+    padding: 0 180px;
+
+    h1 {
+      color: #43efff;
+      font-size: 3.5rem;
+      font-weight: bold;
+    }
+
+    p {
+      color: white;
+      font-size: 1.25rem;
+    }
+
+    .animatedLink {
+      position: relative;
+      display: inline-block;
+      text-align: center;
+      text-decoration: none;
+      background: transparent;
+      padding: 30px 20px;
+      border-radius: 10px;
+      border: 1px solid #43efff;
+      margin-top: 40px;
+      cursor: pointer;
+      color: #43efff;
+      font-size: 1.25rem;
+      font-weight: bold;
+      overflow: hidden;
+      transition: color 0.4s;
+
+      .defaultText,
+      .hoverContent {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: opacity 0.4s, transform 0.4s;
+      }
+
+      .defaultText {
+        opacity: 1;
+      }
+
+      .hoverContent {
+        opacity: 0;
+        transform: translateY(20px);
+        color: #000;
+
+        svg {
+          margin-left: 8px;
+        }
+      }
+
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 100%;
+        top: 0;
+        transition: width 0.4s;
+        z-index: -1;
+      }
+
+      &:before {
+        background: linear-gradient(120deg, #43efff, #00aaff);
+        left: 50%;
+      }
+
+      &:after {
+        background: linear-gradient(120deg, #00aaff, #43efff);
+        right: 50%;
+      }
+
+      &:hover {
+        color: white;
+
+        &:before,
+        &:after {
+          width: 50%;
+        }
+
+        .defaultText {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+
+        .hoverContent {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+
+  .proyectos {
+    background: #00000062;
+  }
+
+  .curriculum {
+    background: #3b043e;
+    height: 100vh; /* Changed from 100dvh to 100vh */
+    width: 50%;
+  }
+}
+@media (max-width: map.get($break-pontis, "xs")) {
+  .Links {
+    flex-direction: column;
+    overflow: hidden;
+    .proyectos,
+    .curriculum {
+      padding: 0 20px;
+      width: 100%;
+
+      h1 {
+        font-size: 2.25rem;
+        
+      }
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,108 @@
+@use "sass:map";
+@import '../../../scss/base/variables';
+@import '../../../scss/animation/animation';
+.info {
+  background: rgba(0, 0, 0, 0.627);
+  background: linear-gradient(
+    180deg,
+    rgba(59, 4, 62, 1) 60%,
+    rgba(0, 0, 0, 0.627) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 7;
+
+  .design,
+  .dev {
+    display: flex;
+    flex-direction: column;
+    object-fit: contain;
+    z-index: 7;
+    padding: 1rem;
+    span {
+      text-transform: capitalize;
+      font-size: 5rem;
+      letter-spacing: 5px;
+      font-weight: 900;
+    }
+    p {
+      font-size: 1.25rem;
+      color: white;
+      line-height: 2rem;
+
+    }
+  }
+  .design {
+    flex-direction: row;
+    justify-content: center;
+    span {
+      margin-top: 80px;
+      height: 140px;
+      transform: rotate(90deg);
+      color: #43efff;
+    }
+  }
+  .dev {
+    span {
+      color: #43efff;
+    }
+    p {
+    
+      margin-top: 50px;
+      width: 80%;
+    }
+  }
+}
+
+
+.animate .design span {
+  animation: tracking-in-expand1 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+.animate .dev span {
+  animation: tracking-in-expand 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+@media (max-width: map.get($break-pontis, "xs")) {
+  
+.info{
+gap: 40px;
+flex-direction: column;
+align-items: center;
+padding-top: 50px;
+overflow: hidden;
+.design,
+.dev {
+  width: 100%;
+  padding: 0 20px;
+  position: relative;
+
+  span {
+    font-size: 3rem;
+  }
+    p {
+      
+       font-size: 0.8rem;
+       margin-top: 0;
+       line-height: 1.5rem;
+     }
+}
+
+.design {
+  span {
+    top: 30px; 
+    left: 0;
+    height: 0;
+    position: absolute;
+  }
+  p {
+  margin-left: 80px;
+  }
+}
+.dev {
+  margin-left: 50px;
+}
+}
+
+}

@@ -1,0 +1,93 @@
+@use "sass:map";
+@import '../../scss/base/variables';
+@import '../../scss/animation/animation';
+.nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    > * {
+        font-size: 8rem;
+        text-decoration: none;
+        color: #fff;
+        text-transform: capitalize;
+        font-weight: 800;
+        transform: translate(200px, 0);
+        letter-spacing: -5px;
+        display: flex;
+        transition: all 0.7s cubic-bezier(0.2, 0.6, 0.2, 1) 0s;
+        &:hover {
+            transform: translate(250px, 0);
+            color: transparent;
+          }
+          &:nth-child(1):hover::before {
+            content: 'Sobre';
+            background-image: linear-gradient(
+              225deg,
+              #43efff 34%,
+              #7e0a61 96%
+            );
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+          }
+  
+          &:nth-child(2):hover::before {
+            content: 'Proyectos';
+            background-image: linear-gradient(
+              225deg,
+              #43efff 34%,
+              #7e0a61 96%
+            );
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+          }
+  
+          &:nth-child(3) {
+            color: #43efff;
+            &:hover {
+              color: transparent;
+            }
+          }
+          &:nth-child(3):hover::before {
+            content: 'Contacto';
+            background-image: linear-gradient(
+              270deg,
+              #43efff 10%,
+              rgba(255, 255, 255, 1) 75%,
+              rgba(126, 10, 97, 1) 130%
+            );
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+          }
+  
+    }
+}
+
+.fadeInLetter {
+  display: inline-block;
+  animation: fadeInBehind 1.3s ease-in;
+}
+
+@media (max-width: map.get($break-pontis, "xs")) {
+  .nav {
+    > * {
+      font-size: 5rem;
+      transform: translate(70px, 0);
+
+    }
+  }
+}

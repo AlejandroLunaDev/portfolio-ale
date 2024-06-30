@@ -1,0 +1,70 @@
+@use "sass:map";
+@import '../../../scss/animation/animation';
+@import '../../../scss/base/variables';
+
+.hero{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    background: #3b043e;
+background: linear-gradient(0deg, rgba(59,4,62,1) 0%, rgba(0,0,0,1) 30%);
+    height: 100dvh;
+    h1{
+        color: #43efff;
+        font-size: 5rem;
+        letter-spacing: -3px;
+        line-height: 1.6;
+        font-weight: 800;
+        padding-top: 250px;
+        text-transform: capitalize;
+        z-index: 3;
+        -webkit-animation: tracking-in-expand 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-expand 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+        
+    }
+
+    p{  
+        color: white;
+        font-size: 1.25rem;
+        z-index: 3;
+    }
+}
+
+.arrow{
+    z-index: 3;
+    position: absolute;
+    bottom: 50px;
+    left: 40%;
+    transform: translateX(-50%);
+    color: #ffff;
+    font-size: 1.8rem;
+    animation: moveUpDown 3s infinite;
+    display: flex;
+    align-items: center;
+
+    small{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: map.get($break-pontis, "xs")) {
+    .hero {
+        padding: 0 30px;
+        h1{
+            font-size: 3rem;
+            padding-top: 180px;
+        }
+        .arrow {
+            left: 25%;
+            small {
+                font-size: 0.7rem;
+            }
+        }
+
+    }
+
+ 
+
+}
