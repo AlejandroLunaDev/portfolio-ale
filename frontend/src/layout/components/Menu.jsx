@@ -132,7 +132,7 @@ export default function Menu() {
                 </NavLink>
               </motion.li>
             ))}
-            {/* Línea violeta animada */}
+            {/* footer */}
             <motion.div
               className={styles.menuLine}
               initial={{ width: 0 }}

@@ -24,8 +24,11 @@
 
 @media (max-width: map.get($break-pontis, "xs")) {
     .navbar { 
-
-        padding: 20px 20px;
+        position: fixed;
+        bottom: 0;
+        top: auto;
+        padding: 5px 20px;
+        backdrop-filter: blur(25px);
         .brand {
             display: flex;
             align-items: center;

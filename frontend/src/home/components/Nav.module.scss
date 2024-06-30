@@ -87,7 +87,12 @@
     > * {
       font-size: 5rem;
       transform: translate(70px, 0);
-
+  
+      &:hover {
+        transform: none;
+        transform: translate(0px, 0);
+      }
+  
     }
   }
 }
