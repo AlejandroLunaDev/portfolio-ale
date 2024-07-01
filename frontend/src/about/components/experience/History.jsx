@@ -62,14 +62,14 @@ const History = () => {
       title: 'Curso de Backend',
       institution: 'Coderhouse',
       duration: '2024-Presente',
-      description: 'El curso de Backend fue una experiencia en la que aprendimos sobre Node.js, Express, MongoDB y cómo crear aplicaciones del lado del servidor.',
+      description: 'El curso de Backend fue una experiencia en la que estoy aprendiendo sobre Node.js, Express, MongoDB y cómo crear aplicaciones del lado del servidor.',
       image: ''
     },
     {
       title: 'Participación en No-Country',
       institution: 'Simulación Laboral',
       duration: '2024',
-      description: 'La participación en No-Country fue una simulación laboral que nos permitió trabajar en proyectos reales, aplicando nuestras habilidades de desarrollo en un entorno colaborativo y profesional.',
+      description: 'La participación en No-Country fue una simulación laboral que me permitió trabajar en proyectos reales, aplicando mis habilidades de desarrollo en un entorno colaborativo y profesional.',
       image: 'https://media.licdn.com/dms/image/D4D22AQEBwMJhp_nIuw/feedshare-shrink_800/0/1716846788510?e=1722470400&v=beta&t=NdPpe4UTALzIs947XqAHUONDbJWKdOCKD-I4sZ4zH3w'
     },
 
@@ -77,7 +77,7 @@ const History = () => {
       title: 'Carrera de Frontend React',
       institution: 'Coderhouse',
       duration: '2023-2024',
-      description: 'El curso de React fue una experiencia en la que aprendimos sobre el uso de React, los hooks, el estado de React, el manejo de eventos, el routing, el uso de Redux, entre otros.',
+      description: 'El curso de React fue una experiencia en la que aprendi sobre el uso de React, los hooks, el estado de React, el manejo de eventos, el routing, el uso de Redux, entre otros.',
       image: 'https://media.licdn.com/dms/image/D4D22AQHuv4DTa0X8MQ/feedshare-shrink_800/0/1714573165545?e=1722470400&v=beta&t=Tb-P8-4_GFDf2IN3LKAI2BBK1zEoUfYYPxLZVoxqqmU'
     },
 
