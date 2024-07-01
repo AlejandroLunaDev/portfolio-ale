@@ -62,7 +62,7 @@ const History = () => {
       title: 'Curso de Backend',
       institution: 'Coderhouse',
       duration: '2024-Presente',
-      description: 'El curso de Backend fue una experiencia en la que estoy aprendiendo sobre Node.js, Express, MongoDB y cómo crear aplicaciones del lado del servidor.',
+      description: 'El curso de Backend es una experiencia en la que estoy aprendiendo sobre Node.js, Express, MongoDB y cómo crear aplicaciones del lado del servidor.',
       image: ''
     },
     {
