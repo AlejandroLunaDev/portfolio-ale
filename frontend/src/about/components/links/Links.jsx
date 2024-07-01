@@ -11,7 +11,7 @@ export default function Links() {
             Diseñar y construir productos web simples, intuitivos y escalables
           </p>
         </header>
-        <a href='/proyectos' className={styles.animatedLink}>
+        <a href='/project' className={styles.animatedLink}>
           <span className={styles.defaultText}>Ver mis proyectos</span>
           <span className={styles.hoverContent}>
             Ir a proyectos <MdOutlineKeyboardDoubleArrowRight />

@@ -139,7 +139,7 @@ export default function Skills() {
             </li>
             <li>
               <h4>API</h4>
-              <p>REST</p>
+              <p>RESTful</p>
             </li>
           </ul>
         </div>

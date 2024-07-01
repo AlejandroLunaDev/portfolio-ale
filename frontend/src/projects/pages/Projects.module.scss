@@ -1,0 +1,88 @@
+.projectsContainer {
+  display: flex;
+  align-items: center;
+
+  .column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    height: 100%;
+
+    .projectContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      position: relative;
+    }
+
+    .projectImage {
+      position: absolute;
+      width: 400px;
+      height: auto;
+      border-radius: 8px;
+      opacity: 0;
+      z-index: -10; /* Iniciar en el fondo */
+
+      &.moveIn {
+        animation: moveIn 20s infinite ease-in;
+      }
+
+      &.moveOut {
+        animation: moveOut cubic-bezier(0.6, -0.28, 0.735, 0.045) 20s infinite ease-out;
+      }
+
+      &:hover {
+        animation-play-state: running;
+      }
+    }
+  }
+}
+
+@keyframes moveIn {
+  0% {
+    transform: translateX(var(--move-direction, 0)) scale3d(1.5, 1.5, 1.5); /* Escala más grande para comenzar */
+    opacity: 0; /* Mantener visible */
+    z-index: -10; /* Llevar al frente */
+  }
+  25% {
+    transform: translateX(var(--move-direction, 0)) scale3d(0.75, 0.75, 0.75); /* Escala ligeramente más pequeña */
+    opacity: 0; /* Mantener visible */
+    z-index: -1; /* Mantener en el fondo */
+  }
+  50% {
+    transform: translateX(0) scale3d(1, 1, 1) scaleZ(2); /* Escala normal al 100% */
+    opacity: 1; /* Hacer visible */
+    z-index: -1; /* Mantener en el fondo */
+  }
+  100% {
+    transform: translateX(var(--move-direction, 0)) scale3d(0.5, 0.5, 0.5); /* Escala más pequeña al final */
+    opacity: 1; /* Hacer invisible */
+  
+  }
+}
+
+@keyframes moveOut {
+  0% {
+    transform: translateX(var(--move-direction, 0)) scale3d(0.5, 0.5, 0.5); /* Escala más pequeña para comenzar */
+    opacity: 1; /* Comenzar invisible */
+    z-index: 1; /* Iniciar con un z-index muy bajo */
+  }
+  25% {
+    transform: translateX(var(--move-direction, 0)) scale3d(0.75, 0.75, 0.75); /* Escala ligeramente más grande */
+    opacity: 1; /* Mantener invisible */
+    z-index:1; /* Mantener en el fondo */
+  }
+  50% {
+    transform: translateX(0) scale3d(1, 1, 1) scaleZ(2); /* Escala normal al 100% */
+    opacity: 1; /* Hacer visible */
+    z-index: 5; /* Llevar al frente */
+  }
+  100% {
+    transform: translateX(var(--move-direction, 0)) scale3d(1.5, 1.5, 1.5); /* Mantener la escala al 150% */
+    opacity: 1; /* Mantener visible */
+    z-index: 5; /* Mantener al frente */
+  }
+}

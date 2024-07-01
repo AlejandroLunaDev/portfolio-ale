@@ -8,7 +8,7 @@ import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
 export default function Menu() {
   const [open, setOpen] = useState(false);
   const items = [
-    { name: 'Proyectos', route: '/proyect' },
+    { name: 'Proyectos', route: '/project' },
     { name: 'Sobre', route: '/about' },
     { name: 'Contacto', route: '/contact' },
     { name: 'Inicio', route: '/' }

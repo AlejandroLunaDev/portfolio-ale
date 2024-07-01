@@ -28,7 +28,7 @@ export default function Nav() {
           hola
         </motion.span>
       </NavLink>
-      <NavLink to='/about'>
+      <NavLink to='/project'>
         <motion.span
           custom={{ delay: 2 }}
           initial="hidden"
@@ -38,7 +38,7 @@ export default function Nav() {
           soy
         </motion.span>
       </NavLink>
-      <NavLink to='/about'>
+      <NavLink to='/contanct'>
         <motion.span
           custom={{ delay: 3 }}
           initial="hidden"
